@@ -1,4 +1,5 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { NextResponse } from 'next/server';
 
 // requires sign in for these routes to be accessed
 const isProtectedRoutes = createRouteMatcher([
@@ -10,11 +11,7 @@ const isProtectedRoutes = createRouteMatcher([
 // TDL: check if correctly redirecting to sign in page
 export default clerkMiddleware(async (auth, req) => { 
   if (isProtectedRoutes(req)) { 
-    const authObj = await auth();
-    if (!authObj.userId) {
-      // Redirect to sign-in page or return 401
-      return Response.redirect('/sign-in');
-    }
+    return NextResponse.rewrite(new URL('/auth/sign-in', req.url))
   }
 });
 

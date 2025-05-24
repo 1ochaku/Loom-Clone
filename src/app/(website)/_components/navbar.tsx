@@ -7,6 +7,7 @@ import React from 'react'
 type Props = {}
 
 // TDL: Landing Page need to be taken care
+// TDL: Logout button need to be added
 const LandingPageNavBar = (props: Props) => {
   return (
     <div className="flex w-full justify-between items-center">

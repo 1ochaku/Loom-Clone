@@ -5,16 +5,6 @@ This is a [Next.js](https://nextjs.org) project which lets user to record videos
 Clone the repo:
 
 ```bash
-
-```
-
-This is a [Next.js](https://nextjs.org) project which lets user to record videos and share it with their loved ones.
-
-## Getting Started
-
-Clone the repo:
-
-```bash
 git clone https://github.com/1ochaku/Loom-Clone.git
 cd Loom-Clone
 
